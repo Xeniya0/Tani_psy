@@ -68,9 +68,28 @@ main .features p {max-width: 400px; margin: 20px auto}
 main .features button {
 background-color: violet;
 border: none;
+padding: 10px 30px;
+border-radius: 10px;
 }
 
 main .features button:hover {
 background-color: #BA55D3;
-border: none;
+}
+
+main .features button:active {
+background-color: #A944C2;
+}
+
+.alert-danger {
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
 }
