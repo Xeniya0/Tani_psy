@@ -1,0 +1,92 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    
+    
+    
+    
+    <section class="content grey">
+        <div class="container">
+             <div class="page_content_description">
+                <h1>отзывы</h1>
+                <h3>о моей работе</h3> 
+            </div>
+
+                    <ul class="rewiews">
+                        <li class="single_rewiew"> <img src="../../static/main/img/reveiw3.jpg" alt="">
+                            <div class="rew_content">
+                                <h4 class="name">Дарья Драконовна</h4>
+                                <p>Таня помогла мне принять и проработать свою теневую сторону. Научившись управлять ею, моё сердце запылало огнём!</p>
+                            </div>
+                        </li>
+                        <li class="single_rewiew"> <img src="../../static/main/img/reveiw1.jpg" alt="">
+                            <div class="rew_content">
+                                <h4 class="name">Всратислав Алексеев</h4>
+                                <p>Спасибо Тане! Она помогла мне найти в жизни повод для улыбки.</p>
+                            </div>
+                        </li>
+                        <li class="single_rewiew"> <img src="../../static/main/img/reveiw2.jpg" alt="">
+                            <div class="rew_content">
+                                <h4 class="name">Токсинья Кринжова (Такси)</h4>
+                                <p>Благодаря Тане я смогла выйти из токсичных отношений. Теперь я ветер среди поля(экологичная).</p>
+                            </div>
+                        </li>
+                        <li class="single_rewiew"> <img src="../../static/main/img/reveiw4.jpg" alt="">
+                            <div class="rew_content">
+                                <h4 class="name">Мужчина или бобёр</h4>
+                                <p>Я лечился от навязчивых сравнений себя с животными. Теперь доволен как слон. До лечения я был злой и нервный как собака, а теперь спокоен как удав.</p>
+                            </div>
+                        </li>
+                        <li class="single_rewiew"> <img src="../../static/main/img/reveiw5.jpg" alt="">
+                            <div class="rew_content">
+                                <h4 class="name">Света Котикова</h4>
+                                <p>Таня вылечила психосоматическую аллергию на котов</p>
+                            </div>
+                        </li>
+                        <li class="single_rewiew"> <img src="../../static/main/img/reveiw6.webp" alt="">
+                            <div class="rew_content">
+                                <h4 class="name">Олег</h4>
+                                <p>Благодаря Тане научился какать. Теперь я могу экономить на стирке!</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <button class="more">показать ещё</button>
+            </div>
+        </section>
+
+    
+    
+    
+    <section class="content dark">
+            <div class="container">
+                <div class="content_description">
+                    <h2>контакты</h2>
+                    <h3>мои социальные сети</h3> </div>
+                <div class="social"> <a href="#"><i class="fa fa-solid fa-paper-plane"></i></a> <a href="#"><i class="fa fa-brands fa-instagram"></i></a> <a href="#"><i class="fa fa-brands fa-vk"></i></a> <a href="#"><i class="fa fa-solid fa-envelope"></i></a> </div>
+            </div>
+        </section>
+        
+        
+        <section class="content grey">
+            <div class="container">
+                <div class="content_description">
+                    <h2>остались вопросы</h2>
+                    <h3>задайте их здесь</h3> </div>
+                <div class="forms">
+                    <form method="post">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="tel" name="phone" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" placeholder="Ваш номер телефона" required>
+                        <input type="email" name="email" placeholder="Ваш e-mail" required>
+                        <input type="text" name="question" placeholder="Ваш вопрос" required>
+                        <button type="submit">Oтправить</button>
+                        <p>нажимая «отправить», вы соглашаетесь с нашей политикой конфиденциальности</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    
+    
+ {% endblock %}

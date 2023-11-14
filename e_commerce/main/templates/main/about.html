@@ -1,11 +1,109 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Абоут{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
 
 {% block content %}
-    <div class="features">
-        <h1>{{ title }}</h1>
-        <p>About</p>
-        <button>Тык</button>
-    </div>
+    
+    
+    
+    
+    <section class="content grey">
+        <div class="container">
+            <div class="page_content_description">
+                <h1>обо мне</h1>
+                <h3>давайте знакомиться</h3> 
+            </div>
+            <div class="page_content_article">
+                <img src="../../static/main/img/abuot_photo_1.jpg" alt="Tani">
+                <div class="page_content_article_text">
+                    <h3>давайте знакомиться</h3>
+                    <p>Меня зовут Таньяна Сокова, и я родилась и выросла в небольшом городе. С самого детства меня привлекала психология - я всегда интересовалась, почему люди ведут себя так, а не иначе, какие у них внутренние мотивы и как они принимают решения. Поэтому после окончания школы я поступила на психологический факультет местного университета.</p>
+                    <br>
+                    <p>Во время учебы я активно участвовала в различных проектах и исследованиях, чтобы получить как можно больше практического опыта. После окончания университета я начала работать в местной консультационной службе, где помогала людям разбираться в своих проблемах и находить пути их решения.</p>
+                </div>
+            </div>
+            <div class="page_content_article even">
+                <img src="../../static/main/img/about_photo_2.jpg" alt="Tani">
+                <div class="page_content_article_text">
+                    <h3>факты</h3>
+                    <ul>
+
+                            <li>Обладаю степенью в области психологии.</li>
+                            <br>
+                            <li>Имею практический опыт работы в области психологии более года.</li>
+                            <br>
+                            <li>Мои специализации включают поведенческую психологию, семейную терапию, консультирование по вопросам стресса и тревоги, и т.д.)).</li>
+                            <br>
+                            <li>Моя цель - помочь клиентам достичь психологического благополучия и саморазвития.</li>
+                            <br>
+                            <li>Я использую различные подходы в своей работе, такие как когнитивно-поведенческая терапия, психодинамическая терапия и др.</li>
+                            <br>
+                            <li>Я предлагаю конфиденциальные и этичные консультации.</li>
+                            <br>
+                            <li>Я готова помочь вам на вашем пути к психологическому здоровью и благополучию.</li>
+                        </ul>
+                </div>
+            </div>
+            <div class="page_content_article">
+                <img src="../../static/main/img/tani.jpg" alt="tani">
+                <div class="page_content_article_text">
+                    <h3>интересности</h3>
+                    <p>Мой профессиональный рост начал ускоряться, когда я начала активно изучать новые методики и подходы в психологии, посещать мастер-классы и тренинги, а также публиковать свои статьи в специализированных изданиях. Мои знания и опыт быстро привлекли внимание коллег и клиентов, и я стала одной из самых востребованных специалистов в области психологии в нашем регионе.</p>
+                    <br>
+                    <p>Сейчас я продолжаю развиваться и расти профессионально, помогая людям находить свой путь к счастью и гармонии. Моя работа не только приносит мне удовлетворение, но и вдохновляет меня на новые свершения. Я убеждена, что страсть к своей профессии и стремление к самосовершенствованию - ключевые факторы успеха в любой области, и я готова продолжать добиваться новых вершин в мире психологии.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    
+    <section class="content blue">
+            <div class="container">
+                <div class="content_description">
+                    <h2>образование</h2>
+                    <h3>подтверждающие документы</h3>   
+                    </div>
+                    <div class="documents">
+                       <img src="../../static/main/img/document_01.png" alt="">
+                        
+                    </div>
+                    
+                    </div>
+            
+        </section>
+    
+    
+    
+    <section class="content dark">
+            <div class="container">
+                <div class="content_description">
+                    <h2>контакты</h2>
+                    <h3>мои социальные сети</h3> </div>
+                <div class="social"> <a href="#"><i class="fa fa-solid fa-paper-plane"></i></a> <a href="#"><i class="fa fa-brands fa-instagram"></i></a> <a href="#"><i class="fa fa-brands fa-vk"></i></a> <a href="#"><i class="fa fa-solid fa-envelope"></i></a> </div>
+            </div>
+        </section>
+        
+        
+        <section class="content grey">
+            <div class="container">
+                <div class="content_description">
+                    <h2>остались вопросы</h2>
+                    <h3>задайте их здесь</h3> </div>
+                <div class="forms">
+                    <form method="post">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="tel" name="phone" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" placeholder="Ваш номер телефона" required>
+                        <input type="email" name="email" placeholder="Ваш e-mail" required>
+                        <input type="text" name="question" placeholder="Ваш вопрос" required>
+                        <button type="submit">Oтправить</button>
+                        <p>нажимая «отправить», вы соглашаетесь с нашей политикой конфиденциальности</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    
 {% endblock %}

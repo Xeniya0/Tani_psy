@@ -1,36 +1,124 @@
 {% load static %}
-<html lang="ru">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"  integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-</head>
-<body>
-    <aside>
-        <img src="{% static 'main/img/logo.png' %}" alt="logo">
-        <span class="logo">Psy</span>
-        <h3>Навигация</h3>
-        <ul>
-            <a href="{% url 'home' %}"><li><i class="fa fa-thin fa-house"></i>&nbsp;Главная</li></a>
-            <a href="{% url 'about' %}"><li><i class="fa fa-thin fa-book"></i>&nbsp;Абоут</li></a>
-            <a href="{% url 'picture' %}"><li><i class="fa fa-thin fa-image"></i>&nbsp;Пиктуре</li></a>
-            <a href="{% url 'news_home' %}"><li><i class="fa fa-thin fa-newspaper"></i>&nbsp;Новости</li></a>
-            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fa fa-thin fa-plus-circle"></i> Новости</button></li></a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="{% static 'main/js/burger.js' %}" defer></script>
+    <script src="{% static 'main/js/slider.js' %}" defer></script>
+    <script src="{% static 'main/js/modal.js' %}" defer></script>
+    <meta name="viewport" content="width=device-width"> </head>
 
-        </ul>
-    </aside>
-    <main>
-        {% block content %}
-        {% endblock %}   
-    </main> 
-</body>
-</html>
+<body>
+
+
+        <header>
+            <div class="container">
+                <div class="header__body">
+                    <div class="header__title">
+                        <a href="#" class="header__logo">
+                            <h3>Психолог<br> Татьяна Соколова</h3> </a>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="header__menu_list">
+                            <li class="header__menu_item"><a href="index" class="header__link current">главная</a></li>
+                            <li class="header__menu_item"><a href="about"   class="header__link">обо&nbsp;мне</a></li>
+                            <li class="header__menu_item"><a href="price"   class="header__link">услуги&nbsp;и&nbsp;цены</a></li>
+                            <li class="header__menu_item"><a href="blog"   class="header__link">блог</a></li>
+                            <li class="header__menu_item"><a href="faq"   class="header__link">faq</a></li>
+                            <li class="header__menu_item"><a href="review"   class="header__link">отзывы</a></li>
+                            <li class="header__menu_item"><a href="dogovor"   class="header__link">договор</a></li>
+                            <li class="header__menu_item"><a href="contacts" class="header__link">контакты</a></li>
+                            <li class="header__menu_item"><a href="contacts"  class="header__link">записаться</a></li>
+                        </ul>
+                    </nav>
+                    <button class="register">записаться</button>
+                    <div class="header__burger"> <span></span> </div>
+                </div>
+                <!-- end header__body -->
+            </div>
+            <!-- end container -->
+        </header>
+        <div class="ontop"> <a href="#top"><i class="fa fa-thin fa-caret-up"></i></a> </div>
+
+              <div class="special">
+
+            <div class="container">
+
+                <div class="modal_content">
+                   <div class="modal_close">
+                       <button>X</button>
+                   </div>
+                    <div class="forms">
+
+                    <form method="post">
+
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="tel" name="phone" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" placeholder="Ваш номер телефона" required>
+                        <input type="email" name="email" placeholder="Ваш e-mail" required>
+                        <input type="text" name="question" placeholder="Ваш вопрос" required>
+                        <button type="submit">Oтправить</button>
+                        <p>нажимая «отправить», вы соглашаетесь с нашей политикой конфиденциальности</p>
+                    </form>
+                </div>
+                </div>
+                <div class="modal_window">
+            </div>
+
+            </div>
+        </div>
+
+
+                {% block content %}
+                {% endblock %}
+
+
+
+
+
+
+
+              <footer>
+            <div class="container">
+                <div class="footer__menu">
+                    <ul class="footer__menu_list">
+                        <li class="footer__menu_item"><a href="#" class="footer__link">главная</a></li>
+                        <li class="footer__menu_item"><a href="#" class="footer__link">обо&nbsp;мне</a></li>
+                        <li class="footer__menu_item"><a href="#" class="footer__link">услуги&nbsp;и&nbsp;цены</a></li>
+                        <li class="footer__menu_item"><a href="#" class="footer__link">блог</a></li>
+                        <li class="footer__menu_item"><a href="#" class="footer__link">faq</a></li>
+                        <li class="footer__menu_item"><a href="#" class="footer__link">отзывы</a></li>
+                        <li class="footer__menu_item"><a href="#" class="footer__link">договор</a></li>
+                        <li class="footer__menu_item"><a href="#" class="footer__link">контакты</a></li>
+                    </ul>
+                    <div class="footer_content">
+                        <div class="legal">
+                            <p class="numbers">ИП Татьяна Соколова</p>
+                            <p class="numbers">ИНН 56473583474</p>
+                        </div>
+                        <div class="with_love">
+                            <p class="copyright">разработано с любовью в <a href="#">Wave</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        </body>
+
+        </html>

@@ -1,0 +1,41 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    
+    
+    
+    <section class="content white">
+        <div class="container">
+             <div class="page_content_description">
+                <h1>договор</h1>
+                <h3>юридическая информация</h3> 
+            </div>
+            <div class="empty">
+                <a href="../../static/main/img/dog.png" target=_blank>Договор предоставления услуг</a>
+            </div>
+            </div>
+            </section>
+        
+        
+        <section class="content grey">
+            <div class="container">
+                <div class="content_description">
+                    <h2>остались вопросы</h2>
+                    <h3>задайте их здесь</h3> </div>
+                <div class="forms">
+                    <form method="post">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="tel" name="phone" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" placeholder="Ваш номер телефона" required>
+                        <input type="email" name="email" placeholder="Ваш e-mail" required>
+                        <input type="text" name="question" placeholder="Ваш вопрос" required>
+                        <button type="submit">Oтправить</button>
+                        <p>нажимая «отправить», вы соглашаетесь с нашей политикой конфиденциальности</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+{% endblock %}
